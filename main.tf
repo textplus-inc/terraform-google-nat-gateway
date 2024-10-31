@@ -66,10 +66,10 @@ module "nat-gateway" {
 
   rolling_update_policy = {
     type                  = "PROACTIVE"
-    minimal_action        = "REPLACE"
+    minimal_action        = "RESTART"
     max_surge_fixed       = 0
     max_unavailable_fixed = 1
-    min_ready_sec         = 30
+    min_ready_sec         = 0
   }
 
   access_config = {
